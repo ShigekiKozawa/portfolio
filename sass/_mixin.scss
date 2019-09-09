@@ -1,0 +1,213 @@
+@charset "UTF-8";
+// ### mixin.scss ###
+//======================================================================================================================
+//----------------------------------------
+//font-family
+//----------------------------------------
+@mixin yuGothic {
+  @font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 400;
+  }
+}
+//----------------------------------------
+//clearfix
+//----------------------------------------
+@mixin clearfix {
+  &:after {
+    display: block;
+    clear: both;
+    content: " ";
+  }
+}
+
+//メディアクエリ
+// @include media(pc) {
+// }
+// @include media(sp) {
+// }
+// @include media(min-width: 569px) {
+// }
+//------------------------------------------------------------------------------
+@mixin media($mode) {
+    @if( $mode == pc ){
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if( $mode == sp ) {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    } @else {
+        @media screen and ($mode) {
+            @content;
+        }
+    }
+}
+
+// ###ベンダープリフィックス
+//======================================================================================================================
+
+// border-image
+// ※スマホ限定 zoom0.5を使わないとレティーナ対応できないので、大枠では使用しないこと
+// @include border-image(url("../../img/base/") 15 round);
+//------------------------------------------------------------------------------
+@mixin border-image($i: url("img/bg_dot.png") 15 round) {
+  border-image:$i fill stretch;
+  border-width: 15px;
+  border-style: solid;
+  zoom: 0.5;
+}
+
+// appearance:none;
+// @include appearance();
+//------------------------------------------------------------------------------
+@mixin appearance {
+  -webkit-appearance:none;
+  appearance:none;
+}
+
+// ###CSSプロパティ
+//======================================================================================================================
+// ■インデント
+// 「※」などのテキストによるアイコン表現でのインデント調整
+// （余白の大きさ pxかemで指定）
+// @include indent();
+//------------------------------------------------------------------------------
+@mixin indent($num) {
+  padding-left: $num;
+  text-indent: -#{$num};
+}
+
+// ■表示範囲に合わせて改行する
+// @include break;
+//------------------------------------------------------------------------------
+@mixin break {
+   word-break: break-all;
+   word-wrap: break-word;
+}
+
+// ###アニメーション
+//======================================================================================================================
+
+
+// @include transform();
+@mixin transform($i) {
+  -webkit-transform: $i;
+  transform:         $i;
+}
+
+// @include scale();
+@mixin scale ($i) {
+  -webkit-transform: scale($i);
+  transform:         scale($i);
+}
+
+// @include rotate();
+@mixin rotate ($i) {
+  -webkit-transform: rotate($i);
+  transform:      rotate($i);
+}
+
+// @include skew();
+@mixin skew ($x, $y:0) {
+  -webkit-transform:       skew($x, $y);
+  transform:      skew($x, $y);
+}
+
+// @include translate();
+@mixin translate ($x, $y:0) {
+  -webkit-transform:       translate($x, $y);
+  transform:      translate($x, $y);
+}
+
+// @include translate3d();
+@mixin translate3d ($x, $y: 0, $z: 0) {
+  -webkit-transform:       translate3d($x, $y, $z);
+  transform:      translate3d($x, $y, $z);
+}
+
+// @include perspective();
+@mixin perspective ($i: 1000) {
+  -webkit-perspective:  $i;
+  perspective:    $i;
+}
+// @include keyframes() {}
+//------------------------------------------------------------------------------
+@mixin keyframes($name){
+  @-webkit-keyframes $name {
+    @content;
+  }
+
+  @keyframes $name {
+    @content;
+  }
+}
+//------------------------------------------------------------------------------
+// @include animation-name();
+@mixin animation-name($i: 'none') {
+  -webkit-animation-name: $i;
+  animation-name: $i;
+}
+
+// @include animation-duration();
+@mixin animation-duration($i: '0s') {
+  -webkit-animation-duration: $i;
+  animation-duration: $i;
+}
+
+// @include animation-timing-function();
+@mixin animation-timing-function($i: 'ease') {
+  -webkit-animation-timing-function: $i;
+  animation-timing-function: $i;
+}
+
+// @include animation-delay();
+@mixin animation-delay($i: '0s') {
+  -webkit-animation-delay: $i;
+  animation-delay: $i;
+}
+
+// @include animation-iteration-count();
+@mixin animation-iteration-count($i: '1') {
+  -webkit-animation-iteration-count: $i;
+  animation-iteration-count: $i;
+}
+
+// @include animation-direction();
+@mixin animation-direction($i: 'normal') {
+  -webkit-animation-direction: $i;
+  animation-direction: $i;
+}
+
+// @include animation-fill-mode();
+@mixin animation-fill-mode($i: 'none') {
+  -webkit-animation-fill-mode: $i;
+  animation-fill-mode: $i;
+}
+
+//  @include after($width: '10px',$height: '10px');
+//------------------------------------------------------------------------------
+@mixin after($width: '10px',$height: '10px') {
+  content:"";
+  display: block;
+  width:$width;
+  height:$height;
+  position: absolute;
+}
