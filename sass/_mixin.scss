@@ -1,0 +1,81 @@
+@charset "UTF-8";
+// ### mixin.scss ###
+//======================================================================================================================
+//----------------------------------------
+//font-family
+//----------------------------------------
+@mixin NotoSans {
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-Thin.ttf") format("ttf");
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-Light.ttf") format("ttf");
+    font-weight: 200;
+  }
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-Regular.ttf") format("ttf");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-Medium.ttf") format("ttf");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-SemiBold.ttf") format("ttf");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-Bold.ttf") format("ttf");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Noto sans";
+    src: local("../font/NotoSans/NotoSans-Black.ttf") format("ttf");
+    font-weight: 900;
+  }
+}
+//----------------------------------------
+//clearfix
+//----------------------------------------
+@mixin clearfix {
+  &:after {
+    display: block;
+    clear: both;
+    content: " ";
+  }
+}
+
+//メディアクエリ
+// @include media(pc) {
+// }
+// @include media(sp) {
+// }
+// @include media(min-width: 569px) {
+// }
+//------------------------------------------------------------------------------
+@mixin media($mode) {
+    @if( $mode == pc ){
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if( $mode == tablet ){
+        @media screen and (min-width: 768px) and (max-width: 960px) {
+            @content;
+        }
+    } @else if( $mode == sp ) {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    } @else {
+        @media screen and ($mode) {
+            @content;
+        }
+    }
+}
