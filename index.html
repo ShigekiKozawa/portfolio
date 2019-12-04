@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
-	<title>Web site| Kozawa Shigeki</title>
+	<title>Portfolio | Kozawa Shigeki</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 
@@ -14,20 +14,23 @@
 
 	<meta property="og:url" content="">
 	<meta property="og:image" content="【og:image】">
-	<meta property="og:site_name" content="Web site| Kozawa Shigeki">
+	<meta property="og:site_name" content="Portfolio| Kozawa Shigeki">
 	<meta property="og:locale" content="ja_JP">
-	<meta property="og:title" content="Web site| Kozawa Shigeki">
+	<meta property="og:title" content="Portfolio| Kozawa Shigeki">
 	<meta property="og:description" content="">
 	<meta property="og:type" content="website">
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Web site| Kozawa Shigeki">
+	<meta name="twitter:title" content="Portfolio| Kozawa Shigeki">
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image:src" content="">
 
+	<link rel="stylesheet" href="./css/slick.css" type="text/css">
+	<link rel="stylesheet" href="./css/slick-theme.css" type="text/css">
 	<link rel="stylesheet" href="./css/base.css" type="text/css">
 	<script type="text/javascript" src="./js/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="./js/waypoint.js"></script>
+	<script type="text/javascript" src="./js/slick.min.js"></script>
 	<script type="text/javascript" src="./js/common.js"></script>
 </head>
 <body>
@@ -58,15 +61,17 @@
 				<p>texttexttexttexttexttexttexttexttexttexttexttexttext</p>
 			<!-- /.about__cont --></div>
 		<!-- /.about --></section>
-		<section class="section achieve" id="achieve">
-			<div class="ttl achieve__ttl anim">
+		<section class="section archive" id="archive">
+			<div class="ttl archive__ttl anim">
 				<h2>Archieve</h2>
 			</div>
-			<div class="cont achieve__cont anim">
-				<h3>テキスト</h3>
-				<p>texttexttexttexttexttexttexttexttexttexttexttexttext</p>
+			<div class="cont archive__cont anim">
+				<ul class="slider">
+					<li><p><a href="http://code-museum.biz/searchApp/" target="_blank"><img src="./img/searchApp.jpg" alt="ニュースまとめ"></a></p></li>
+					<li><p><a href="http://code-museum.biz/designParts/" target="_blank"><img src="./img/designParts.jpg" alt="webデザインまとめ"></a></p></li>
+				</ul>
 			</div>
-		<!-- /.achieve --></section>
+		<!-- /.archive --></section>
 		<section class="section contact" id="contact">
 			<div class="ttl contact__ttl anim">
 				<h2>Contact</h2>
@@ -91,10 +96,10 @@
 		        </form>
 			<!-- /.contact__cont --></div>
 		<!-- /.contact --></section>
-		<div class="loading">
+		<!--div class="loading">
 			<p class="loading__logo">
 				<span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span><span>!</span></p>
-		<!-- /.loading --></div>
+		</div -->
 	</main>
 	<footer class="footer">
 		<p class="copy">copy &copy; xxx</p>

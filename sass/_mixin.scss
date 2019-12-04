@@ -62,7 +62,7 @@
 //------------------------------------------------------------------------------
 @mixin media($mode) {
     @if( $mode == pc ){
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 961px) {
             @content;
         }
     } @else if( $mode == tablet ){
