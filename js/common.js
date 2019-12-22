@@ -37,7 +37,7 @@ $(function(){
 	});
 	$(window).on('scroll', function(){
 		var position = $(this).scrollTop();
-		var sect1 = $('#about');
+		var sect1 = $('#profile');
 		var sect2 = $('#archive');
 		var sect3 = $('#contact');
 		var sect1_h = sect1.offset().top;

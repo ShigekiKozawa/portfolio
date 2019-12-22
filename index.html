@@ -12,8 +12,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-	<meta property="og:url" content="">
-	<meta property="og:image" content="【og:image】">
+	<meta property="og:url" content="http://code-museum.biz/portfolio/">
+	<meta property="og:image" content="http://code-museum.biz/portfolio/img/ogp.png">
 	<meta property="og:site_name" content="Portfolio| Kozawa Shigeki">
 	<meta property="og:locale" content="ja_JP">
 	<meta property="og:title" content="Portfolio| Kozawa Shigeki">
@@ -25,6 +25,7 @@
 	<meta name="twitter:description" content="">
 	<meta name="twitter:image:src" content="">
 
+	<link rel="canonical" href="http://code-museum.biz/portfolio/">
 	<link rel="stylesheet" href="./css/slick.css" type="text/css">
 	<link rel="stylesheet" href="./css/slick-theme.css" type="text/css">
 	<link rel="stylesheet" href="./css/base.css" type="text/css">
@@ -45,25 +46,64 @@
         <!-- /.header__btn --></div>
 		<nav class="header__nav">
 			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#achieve">Archieve</a></li>
+				<li><a href="#profile">Profile</a></li>
+				<li><a href="#archive">Archive</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		<!-- /.header__nav --></nav>
 	<!-- /.header --></header>
 	<main class="top">
-		<section class="section about" id="about">
-			<div class="ttl about__ttl">
-				<h2>About</h2>
+		<section class="section profile" id="profile">
+			<div class="ttl profile__ttl">
+				<h2 class="headline-h2">Profile<span>自己紹介</span></h2>
 			<!-- /.about__ttl --></div>
-			<div class="cont about__cont">
-				<h3>テキスト</h3>
-				<p>texttexttexttexttexttexttexttexttexttexttexttexttext</p>
+			<div class="cont profile__cont">
+				<div class="profile__inner">
+					<div class="about__block">
+						<h3 class="headline-h3">名前：</h3>
+						<p>小澤 繁輝（こざわ しげき）</p>
+					</div>
+					<div class="profile__block">
+						<h3 class="headline-h3">業種：</h3>
+						<p>ネット広告（SNS広告）</p>
+					</div>
+					<div class="profile__block full">
+						<h3 class="headline-h3">職種：</h3>
+						<p>フロントエンドエンジニア</p>
+					</div>
+					<div class="profile__block full">
+						<h3 class="headline-h3">業務内容</h3>
+						<p>主にLP制作・サイトリニューアル。運用業務でWEBサイト改修・バナーやカンプの修正</p>
+						<h3 class="headline-h3">スキル：</h3>
+						<p>HTML、CSS、JavaScript（jQuery, ES6, Vue.js）、Movable Type（3, 5, 6, 7）、Photoshop、Fireworks、Github</p>
+						<h3 class="headline-h3">趣味：</h3>
+						<p>鑑賞（音楽や映画）、筋トレ、アーケードゲーム、池袋か秋葉原に行くこと</p>
+						<h3 class="headline-h3">コメント：</h3>
+						<p>広告業の会社なので、よりSEOを意識した業務になっています。開発の経験がないですが、エンジニアと連携してシステムを埋め込んだサイトを制作した実績があります。</p>
+					</div>
+					<div class="profile__block">
+						<h4 class="headline-h4">Github</h4>
+						<p><a href="https://github.com/ShigekiKozawa" target="_blank">https://github.com/ShigekiKozawa</a></p>
+					</div>
+					<div class="profile__block">
+						<h4 class="headline-h4">CodePen</h4>
+						<p><a href="https://codepen.io/sige0821" target="_blank">https://codepen.io/sige0821</a></p>
+					</div>
+					<div class="profile__block">
+						<h4 class="headline-h4">JSFiddle</h4>
+						<p><a href="https://jsfiddle.net/user/sigeki_kozawa/" target="_blank">https://jsfiddle.net/user/sigeki_kozawa/</a></p>
+					</div>
+					<div class="profile__block">
+						<h4 class="headline-h4">SNS</h4>
+						<p class="icon-sns"><a href="https://www.facebook.com/profile.php?id=100005526343283&ref=bookmarks"><img src="./img/fb.png" alt="Facebook icon"></a></p>
+						<p class="icon-sns"><a href="https://twitter.com/sigekun8210" target="_blank"><img src="./img/tw.png" alt="Twitter icon"></a></p>
+					</div>
+				</div>
 			<!-- /.about__cont --></div>
 		<!-- /.about --></section>
 		<section class="section archive" id="archive">
 			<div class="ttl archive__ttl anim">
-				<h2>Archieve</h2>
+				<h2 class="headline-h2">Archieve<span>趣味で制作したもの</span></h2>
 			</div>
 			<div class="cont archive__cont anim">
 				<ul class="slider">
@@ -74,14 +114,14 @@
 		<!-- /.archive --></section>
 		<section class="section contact" id="contact">
 			<div class="ttl contact__ttl anim">
-				<h2>Contact</h2>
+				<h2 class="headline-h2">Contact<span>ご連絡</span></h2>
 			<!-- /.contact__ttl --></div>
 			<div class="cont contact__cont anim">
 				<p class="mb20">Webサイトを見てくださってありがとうございました！<br class="pc">コメントがございましたら気軽にフォームをご利用ください。</p>
 				<hr>
 		        <form action="confirm.php" method="post">
 		        	<div class="contact__pre">
-			            <label for="name">なまえ：</label>
+			            <label for="name">名前：</label>
 			            <input type="text" name="name" size="50" value="">
 		        	</div>
 		        	<div class="contact__pre">
