@@ -796,4 +796,38 @@ img{
 .footer{
 	position: absolute;
 	left: 0; bottom: 0;
+	&__btn {
+		height: calc(50 / 750 * 100vw);
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		position: absolute;
+	    top: calc(30 / 750 * 100vw); right: calc(40 / 750 * 100vw);
+		z-index: 9999;
+		transition: .3s all ease-out;
+		&.active {
+			p {
+				color: #fff;
+			}
+			span {
+				border-color: #fff;
+				&:nth-of-type(1) {
+					top: 45%; right: 0;
+					transform: rotate(-45deg);		
+				}
+				&:nth-of-type(2), &:nth-of-type(3) {
+					top: 45%;
+					transform: rotate(45deg); 		
+				}
+			}
+		}
+	}
+}
+@include media(pc) {
+	.footer{
+		&__btn {
+		    height: 25px;
+		    top: 30px; right: 60px;
+		}
+	}
 }

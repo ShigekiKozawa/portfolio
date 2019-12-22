@@ -495,5 +495,12 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 	footer
 -----------------------------------------------------------------*/
 .footer { position: absolute; left: 0; bottom: 0; }
+.footer__btn { height: calc(50 / 750 * 100vw); display: flex; justify-content: space-between; cursor: pointer; position: absolute; top: calc(30 / 750 * 100vw); right: calc(40 / 750 * 100vw); z-index: 9999; transition: .3s all ease-out; }
+.footer__btn.active p { color: #fff; }
+.footer__btn.active span { border-color: #fff; }
+.footer__btn.active span:nth-of-type(1) { top: 45%; right: 0; transform: rotate(-45deg); }
+.footer__btn.active span:nth-of-type(2), .footer__btn.active span:nth-of-type(3) { top: 45%; transform: rotate(45deg); }
+
+@media screen and (min-width: 961px) { .footer__btn { height: 25px; top: 30px; right: 60px; } }
 
 /*# sourceMappingURL=base.css.map */
