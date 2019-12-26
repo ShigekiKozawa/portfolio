@@ -17,6 +17,7 @@ $(function(){
     	load.addClass('hide');
     	setTimeout(function(){
     		load.css('display', 'none');
+			$(".pagetop").addClass('active');
     	}, 2500);
     });
     // navigation
