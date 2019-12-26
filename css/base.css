@@ -347,8 +347,8 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 .headline { font-weight: 600; display: block; }
 .headline-h2 { font-size: calc(48 / 750 * 100vw); }
 .headline-h2 span { margin-top: calc(10 / 750 * 100vw); font-size: calc(24 / 750 * 100vw); font-weight: 300; display: block; }
-.headline-h3 { margin-bottom: calc(10 / 750 * 100vw); }
-.headline-h4 { margin-bottom: calc(10 / 750 * 100vw); }
+.headline-h3 { font-size: calc(36 / 750 * 100vw); margin-bottom: calc(10 / 750 * 100vw); }
+.headline-h4 { font-size: calc(32 / 750 * 100vw); margin-bottom: calc(10 / 750 * 100vw); }
 
 @media screen and (min-width: 961px) { .headline-h2 { font-size: 3.6rem; }
   .headline-h2 span { margin-top: 5px; font-size: 1.4rem; }
@@ -356,11 +356,6 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
   .headline-h3:not(:first-child) { margin-top: 20px; }
   .headline-h4 { margin-bottom: 10px; font-size: 1.6rem; }
   .headline-h4:not(:first-child) { margin-top: 20px; } }
-.icon-sns { display: inline-block; }
-.icon-sns:not(:last-child) { margin-right: 10px; }
-
-@media screen and (min-width: 961px) { .icon-sns { width: 50px; }
-  .icon-sns:not(:last-child) { margin-right: 10px; } }
 /*------------------------------------------------------------------
 	loading
 -----------------------------------------------------------------*/
@@ -447,15 +442,27 @@ img { max-width: 100%; height: auto; vertical-align: bottom; }
 /*------------------------------------------------------------------
 	profile
 -----------------------------------------------------------------*/
+.profile__cont p { font-size: 1.4rem; }
+.profile__inner p, .profile__inner a { font-size: calc(28 / 750 * 100vw); line-height: 1.3; }
+.profile__inner a { color: #fff; }
+.profile .icon-sns { margin-bottom: 0; width: calc(100 / 750 * 100vw); display: inline-block; }
+.profile .icon-sns:not(:last-child) { margin-right: calc(20 / 750 * 100vw); }
+
+@media screen and (max-width: 767px) { .profile__block { margin-bottom: calc(40 / 750 * 100vw); }
+  .profile__block:last-child { margin-bottom: 0; }
+  .profile__block p { margin-bottom: calc(20 / 750 * 100vw); }
+  .profile__block p:last-of-type { margin-bottom: 0; } }
 @media screen and (min-width: 961px) { .profile__cont p { font-size: 1.4rem; }
   .profile__inner { display: flex; justify-content: space-between; flex-wrap: wrap; }
-  .profile__inner p, .profile__inner a { font-size: 1.4rem; line-height: 1.3; }
-  .profile__inner a { color: #fff; text-decoration: underline; }
+  .profile__inner p, .profile__inner a { font-size: 1.4rem; }
+  .profile__inner a { text-decoration: underline; }
   .profile__inner a:hover { text-decoration: none; opacity: .8; }
   .profile__block { margin-bottom: 20px; width: 49%; }
   .profile__block:nth-child(2n+1) { margin-right: 1%; }
   .profile__block:nth-last-child(2), .profile__block:last-child { margin-bottom: 0; }
-  .profile__block.full { width: 100%; } }
+  .profile__block.full { width: 100%; }
+  .profile .icon-sns { width: 50px; }
+  .profile .icon-sns:not(:last-child) { margin-right: 10px; } }
 /*------------------------------------------------------------------
 	archive, slider
 -----------------------------------------------------------------*/
