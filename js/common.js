@@ -22,7 +22,7 @@ $(function(){
     });
     // navigation
 	$('.header__nav a').on('click', function(){
-		$('.header__nav').removeClass('active');
+		$('.header__btn, .header__nav').removeClass('active');
 	});
 	$('.header__btn').on('click', function(){
 		$(".header__nav, .header__btn").toggleClass('active');
